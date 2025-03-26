@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: whitesmoke;
+    color:#1B1B1B;
+    font-family: "Poppins";
+}
+
+.navContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+nav{
+    width: 100vw;
+    transition: width .7s, box-shadow 2s , margin-top .2s, border-radius 1.5s;
+    padding: 10px 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    font-size: 12.5px;
+    font-weight: 400;
+    color: #1B1B1B;
+}
+
+.navPro{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100px;
+}
+.imgWrapper{
+    display: inline-block;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.imgWrapper img{
+    height: 60px;
+    transform: translate(-15px, -5px);
+}
+
+nav h1{
+    font-size: 15px;
+    font-weight: 200;
+}
+nav ul{
+    transition: width .7s;
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #1B1B1B;
+}
+nav ul li a:hover{
+    color:#595f39;
+}
+
+.acc{
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    align-items: center;
+    overflow: hidden;
+    transition: width .7s;
+}
+.acc i{
+    margin: 0 10px;
+}
+
+
+h1{
+    font-size: 60px;
+    font-weight: 600;
+    
+}
+#home{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-self: center
+} #home h1{
+    font-size: 60px;
+    font-weight: 400;
+    
+}
+
+
+
+
+
+
+
+
+#about{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-self: center
+} #about h1{
+    font-size: 60px;
+    font-weight: 600;
+    
+}
+#contact{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-self: center
+} #contact h1{
+    font-size: 60px;
+    font-weight: 600;
+    
+}
+
+@media only screen and (max-width: 500px){
+    .navPro{
+        width: 30px;
+    }
+    .navPro h1 {
+        font-size: 0;
+    }
+    .acc{
+        width: 30px;
+    }
+}
+
+
+.hero{
+    width: 40%;
+}
+.heroText{
+    width: 0;
+    overflow: hidden;
+    text-wrap: nowrap;
+    border-right: solid 2px rgb(184, 184, 184);
+    animation: typewriter 5s ease-in-out forwards ;
+    
+}
+
+@keyframes typewriter{
+    0%{
+        width: 0;
+    }
+    50% {
+        width:100%;
+    }
+    100%{
+        width: 0;
+    }
+
+}

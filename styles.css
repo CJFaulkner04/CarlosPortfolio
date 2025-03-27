@@ -11,8 +11,7 @@ html{
 
 
 body{
-    background-color: whitesmoke;
-    color:#1B1B1B;
+    color:white;
     font-family: "Poppins";
 }
 
@@ -27,15 +26,15 @@ body{
 nav{
     width: 100vw;
     transition: width .7s, box-shadow 2s , margin-top .2s, border-radius 1.5s;
-    padding: 10px 0;
-    background-color: white;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid rgb(223, 223, 223);
+    /* border-bottom: 1px solid rgb(223, 223, 223); */
     font-size: 12.5px;
     font-weight: 400;
-    color: #1B1B1B;
+    color: white;
 }
 
 .navPro{
@@ -73,10 +72,10 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
-    color: #1B1B1B;
+    color: white;
 }
 nav ul li a:hover{
-    color:#595f39;
+    color:#686868;
 }
 
 .acc{
@@ -91,6 +90,9 @@ nav ul li a:hover{
 .acc i{
     margin: 0 10px;
 }
+.acc i:hover{
+    color:#686868;
+}
 
 
 h1{
@@ -98,30 +100,108 @@ h1{
     font-weight: 600;
     
 }
-#home{
-    height: 100vh;
-    width: 100%;
+#hero{
     display: flex;
     align-items: center;
-    justify-self: center
-} #home h1{
-    font-size: 60px;
-    font-weight: 400;
+    justify-content: center;
+    padding-top: 50px;
+    height: 85vh;
+    width: 100%;
+    background: linear-gradient(#272727,#0b0b0b);
+}
+
+.heroMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    height: 60%;
+    max-height: 650px;
+}
+
+.heroImg{
+    display: inline-block;
+    overflow: hidden;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background: linear-gradient(rgb(255, 255, 255), rgb(186, 186, 186));
+    box-shadow: 0 2px 20px 2px rgba(255, 255, 255, 0.151);
     
+}
+.heroImg img{
+    width: 300px;
+    transform: translate(-65px, -10px);
+    filter: grayscale(30%);
+}
+.hero{
+    width: 100%;
+    text-align: center;
+    
+}
+.hero h1{
+    color: white;
+    font-weight: 400 !important;
+}
+.heroText{
+    overflow: hidden;
+    white-space: nowrap;    
+}
+.heroText b{
+    font-weight: 500;
+}
+.heroText a{
+    font-weight: 200;
+    animation: cursor .6s infinite ease-in-out;
+}
+.heroCall{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 60%;
+    font-size: 13px;
+    text-align: center;
+}
+.heroCall h2{
+    font-weight: 200;
+}
+.btn{
+    margin-top: 15px;
+    height: 20px;
+    width: 100px;
+    font-weight: bold;
+    color: #141414;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 17.5px;
+    box-shadow: 0 0 3px 2px rgba(255, 255, 255, .2);
+    transition: box-shadow .2s;
+    
+}
+.btn:hover{
+    box-shadow: 0 0 20px 2px rgba(255, 255, 255, .5);
+}
+
+
+@keyframes cursor {
+    from {
+        color: rgba(0,0,0,0);
+    }
+    to {
+        color: rgb(78, 78, 78);
+    }
 }
 
 
 
 
 
-
-
-
-#about{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-self: center
+#tech{
+    height: 10vh;
+    width: 100%;
+    background-color: var(--token-95d5fca9-2fd9-4634-90af-d768312a9357, rgb(29, 29, 31))
 } #about h1{
     font-size: 60px;
     font-weight: 600;
@@ -151,27 +231,5 @@ h1{
 }
 
 
-.hero{
-    width: 40%;
-}
-.heroText{
-    width: 0;
-    overflow: hidden;
-    text-wrap: nowrap;
-    border-right: solid 2px rgb(184, 184, 184);
-    animation: typewriter 5s ease-in-out forwards ;
-    
-}
 
-@keyframes typewriter{
-    0%{
-        width: 0;
-    }
-    50% {
-        width:100%;
-    }
-    100%{
-        width: 0;
-    }
 
-}
